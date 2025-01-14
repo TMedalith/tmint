@@ -1,21 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+:root{
+  --primary: #f3f4f6;
+  --secondary: #1a202c;
+  --accent: #f56565;
+  --accent-hover: #ed8936;
+  --accent-light: #f6ad55;
+  --accent-dark: #e53e3e;
+  --accent-darker: #c53030;
+  --accent-darkest: #742a2a;
+  --accent-lighter: #f6e05e;
+  --accent-lightest: #f6e05e;
+  --text-description:#F9E0DB;
+
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+
+.cursive {
+  font-family: "Cedarville Cursive", cursive;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.pacifico{
+  font-family: 'Pacifico', cursive;
+}
+
+
+.scrollbar-hidden {
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
 }
