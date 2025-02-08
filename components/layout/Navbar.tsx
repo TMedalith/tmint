@@ -31,7 +31,7 @@ const Navbar = () => {
       </div>
 
       <a
-        href="https://drive.google.com/file/d/1OIVb9fIq1qdLlZuw-2MeobQkelAhS8cG/view?usp=sharing"
+        href=""
         target="_blank"
         rel="noopener noreferrer"
         download
