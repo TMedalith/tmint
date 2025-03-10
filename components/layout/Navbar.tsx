@@ -20,10 +20,10 @@ const Navbar = () => {
           <FaUser className="mr-2 group-hover:animate-spin transition-colors duration-300" />
           <span className="hidden md:inline">About</span>
         </a>
-        <a href={`/#skills`} className="relative cursor-pointer transition-all before:content-[''] before:absolute before:-bottom-2 before:left-0 before:w-full before:h-[2px] before:bg-[#E7B5AC] before:scale-x-0 before:origin-bottom-right before:transition-transform before:duration-300 hover:before:scale-x-100 hover:before:origin-bottom-left flex items-center group hover:text-[#E7B5AC]">
+        {/* <a href={`/#skills`} className="relative cursor-pointer transition-all before:content-[''] before:absolute before:-bottom-2 before:left-0 before:w-full before:h-[2px] before:bg-[#E7B5AC] before:scale-x-0 before:origin-bottom-right before:transition-transform before:duration-300 hover:before:scale-x-100 hover:before:origin-bottom-left flex items-center group hover:text-[#E7B5AC]">
           <FaTools className="mr-2 group-hover:animate-spin transition-colors duration-300" />
           <span className="hidden md:inline">Skills</span>
-        </a>
+        </a> */}
         <a href={`/#projects`} className="relative cursor-pointer transition-all before:content-[''] before:absolute before:-bottom-2 before:left-0 before:w-full before:h-[2px] before:bg-[#E7B5AC] before:scale-x-0 before:origin-bottom-right before:transition-transform before:duration-300 hover:before:scale-x-100 hover:before:origin-bottom-left flex items-center group hover:text-[#E7B5AC]">
           <FaProjectDiagram className="mr-2 group-hover:animate-spin transition-colors duration-300" />
           <span className="hidden md:inline">Projects</span>
