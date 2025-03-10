@@ -9,7 +9,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        'axolotl': '#588061',
+        'axolotl': '#869F77',
         'artichoke': '#869F77',
         'linen': '#FDE9EA',
         'pale-pink': '#F9E0DB',

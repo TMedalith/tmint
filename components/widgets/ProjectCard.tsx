@@ -22,48 +22,14 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
-  const links = [
-    {
-      icon: <FaGithub className="w-5 h-5" />,
-      link: project.githubLink,
-      label: "GitHub Repository"
-    },
-    {
-      icon: <FaExternalLinkAlt className="w-5 h-5" />,
-      link: project.liveDemoLink,
-      label: "Live Demo"
-    }
-  ]
 
 
 
   return (
-    <article className="max-w-6xl mx-auto p-6 group">
-      <div className="bg-gradient-to-br from-gray-900/90 to-transparent backdrop-blur rounded-2xl border border-[#588061]/20 overflow-hidden ">
-        { }
-        <div className="absolute inset-0 opacity-50">
-          <svg className="w-full h-full">
-            <pattern
-              id="grid"
-              width="30"
-              height="30"
-              patternUnits="userSpaceOnUse"
-            >
-              <path
-                d="M 30 0 L 0 0 0 30"
-                fill="none"
-                stroke="#588061"
-                strokeWidth="0.5"
-                opacity="0.3"
-              />
-            </pattern>
-            <rect width="100%" height="100%" fill="url(#grid)" />
-          </svg>
-        </div>
-
-        <div className="flex flex-col lg:flex-row gap-8 p-6">
-          { }
-          <div className="lg:w-1/2">
+    <article className="     ">
+      <div className="bg-gradient-to-br from-gray-900/90 to-transparent backdrop-blur rounded-2xl border border-[#869F77]/20   ">
+        <div className="flex flex-col md:flex-row gap-6  p-6">
+          <div className="md:w-1/2">
             <div className="relative aspect-video rounded-xl overflow-hidden">
               <Image
                 src={project.image}
@@ -74,38 +40,49 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             </div>
           </div>
 
-          { }
-          <div className="lg:w-1/2 space-y-6">
-            <h3 className="text-2xl font-medium text-[#FDE9EA]">
-              {project.title}
-            </h3>
+          <div className="lg:w-1/2 md:space-y-6 space-y-3">
+            <div className="flex justify-between items-center">
+              <h3 className="text-xl md:text-2xl tracking-wider font-bold text-white">
+                {project.title}
+              </h3>
 
 
-            <div className="flex gap-4 z-10 relative">
-              {links.map((item, i) => item.link && (
-                <a
-                  key={i}
-                  href={item.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={item.label}
-                  className="p-2 text-[#E7B5AC] hover:text-[#F9E0DB] transition-colors"
-                >
-                  {item.icon}
-                </a>
-              ))}
+              <div className="flex gap-4 z-10 relative">
+
+                {project.githubLink && (
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub Repositor"
+                    className="p-2 text-[#869F77] hover:text-[#95cda1] transition-colors cursor-pointer"
+                  >
+                    <FaGithub className="w-5 h-5" />
+                  </a>
+                )}
+                {project.liveDemoLink && (
+                  <a
+                    href={project.liveDemoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Live Demo"
+                    className="p-2 text-[#869F77] hover:text-[#abe2b7] transition-colors cursor-pointer"
+                  >
+                    <FaExternalLinkAlt className="w-5 h-5" />
+                  </a>
+                )}
+              </div>
             </div>
 
-            <p className="text-text-description">
+            <p className="text-white  text-justify">
               {project.description}
             </p>
 
-            { }
             <div className="flex flex-wrap gap-3">
               {project.technologies.map((tech, index) => (
                 <span
-                  key={`${project.title}-tech-${index}`}
-                  className="px-4 py-2 text-sm rounded-lg text-[#FDE9EA] border border-[#588061]/20 transition-transform hover:scale-105"
+                  key={index}
+                  className="px-4 py-2 text-sm rounded-lg text-white border border-[#869F77]/20 transition-transform hover:scale-105"
                 >
                   {tech.name}
                 </span>

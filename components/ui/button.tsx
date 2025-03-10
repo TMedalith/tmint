@@ -19,8 +19,8 @@
         <Comp
           ref={ref as any}
           className={cn(
-            'inline-flex items-center gap-2 px-6 py-3 text-sm transition-all duration-300 rounded-full',
-            'bg-[#588061] text-white hover:bg-[#588061]/90',
+            'inline-flex items-center gap-2 px-6 py-3 text-sm transition-all duration-300 rounded-md',
+            'bg-[#869F77] text-white hover:bg-[#869F77]/90',
             className
           )}
           {...(variant === 'link' ? { href } : props)}

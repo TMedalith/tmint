@@ -7,11 +7,11 @@ interface SectionHeaderProps {
 
 const SectionHeader: React.FC<SectionHeaderProps> = ({ title, description }) => {
   return (
-    <div className="text-center mb-12 sm:mb-16">
-      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold  text-transparent bg-clip-text  bg-gradient-to-r from-[#588061] to-[#869F77] mb-4">
+    <div className="text-center mt-20  ">
+      <h2 className="text-4xl md:text-6xl  font-bold  text-transparent bg-clip-text  bg-[#869F77]   ">
         {title}
       </h2>
-      <p className="text-[#FDE9EA]/60 text-lg sm:text-xl max-w-2xl mx-auto">
+      <p className="text-white/60 text-lg md:text-xl max-w-2xl mx-auto">
         {description}
       </p>
     </div>

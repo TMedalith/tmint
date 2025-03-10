@@ -1,20 +1,12 @@
 "use client";
-import React from 'react';
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import React from "react";
 
 const Footer = () => {
-    const socialLinks = [
-        { icon: <FaGithub size={20} />, href: "https://github.com" },
-        { icon: <FaLinkedin size={20} />, href: "https://linkedin.com" },
-        { icon: <FaTwitter size={20} />, href: "https://twitter.com" },
-        { icon: <FaEnvelope size={20} />, href: "mailto:contact@example.com" }
-    ];
-
     return (
-        <footer className="bg-gradient-to-b text-white p-8 text-center from-transparent to-gray-900 ">
-            
-               Crafted with 💚 by TMint © {new Date().getFullYear()}
-              
+        <footer className="  text-white py-8 text-center">
+            <p className="text-gray-300  text-base tracking-wide">
+                🌸 Creando, aprendiendo y compartiendo 🌸 | TMINT © {new Date().getFullYear()}  
+            </p>
         </footer>
     );
 };
