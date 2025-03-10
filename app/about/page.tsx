@@ -25,7 +25,7 @@ export default function About() {
         className="mx-auto mb-16 max-w-7xl px-4 sm:px-6 lg:px-8"
       >
         <h1 className="mb-6 text-center text-5xl font-bold text-white md:text-6xl">
-          My Journey in <span className="text-[#588061]">Software Engineering</span>
+          My Journey in <span className="text-[#869F77]">Software Engineering</span>
         </h1>
         <p className="mx-auto max-w-3xl text-center text-lg text-neutral-300">
           As a Software Engineering student at UPC, I constantly seek to expand
@@ -46,8 +46,8 @@ export default function About() {
               className={cn(
                 'transition-all duration-300 ease-in-out !px-6 !py-3',
                 selectedCategory === id
-                  ? 'bg-[#588061] text-white shadow-lg scale-105'
-                  : '!bg-[#588061]/10 text-neutral-200 hover:!bg-[#588061]/20'
+                  ? 'bg-[#869F77] text-white shadow-lg scale-105'
+                  : '!bg-[#869F77]/10 text-neutral-200 hover:!bg-[#869F77]/20'
               )}
               showArrow={false}
             >

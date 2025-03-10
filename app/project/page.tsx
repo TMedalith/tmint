@@ -52,7 +52,7 @@ const ProjectsPage: React.FC = () => {
       <div
         ref={filterRef}
         className="sticky top-4 z-20 flex flex-wrap items-center justify-center gap-2 sm:gap-3 bg-gray-900/80 p-3 sm:p-4 
-        rounded-lg sm:rounded-xl backdrop-blur-xl border border-[#588061]/20 max-w-xs sm:max-w-2xl lg:max-w-3xl mx-auto mb-12 sm:mb-16"
+        rounded-lg sm:rounded-xl backdrop-blur-xl border border-[#869F77]/20 max-w-xs sm:max-w-2xl lg:max-w-3xl mx-auto mb-12 sm:mb-16"
       >
         <FaFilter className="text-[#FDE9EA] w-4 h-4 sm:w-5 sm:h-5" />
         {projectTypes.map(type => (
@@ -61,7 +61,7 @@ const ProjectsPage: React.FC = () => {
             onClick={() => setSelectedType(type.id)}
             className={`px-3 sm:px-4 py-1.5 sm:py-2 text-sm sm:text-base rounded-lg transition-all duration-300 transform hover:scale-105 
             ${selectedType === type.id
-              ? 'bg-[#588061] text-[#FDE9EA] shadow-lg'
+              ? 'bg-[#869F77] text-[#FDE9EA] shadow-lg'
               : 'bg-gray-800/80 text-[#FDE9EA]/60 hover:bg-gray-700'
             }`}
           >

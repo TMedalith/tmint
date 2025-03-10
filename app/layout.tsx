@@ -37,11 +37,11 @@ export default function RootLayout({
           particleColor="#FFFFFF"
         />
         </div>
-        <div className="relative w-full  z-10">
-          <Navbar />
+         <Navbar />
+        <div className="relative w-full pt-20 px-14 md:px-24 z-10">
           {children}
-          <Footer />
         </div>
+        <Footer />
       </body>
     </html>
   );

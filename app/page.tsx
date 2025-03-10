@@ -10,12 +10,13 @@ import SocialMedia from "@/components/layout/SocialMedia";
 export default function Home() {
   return (
     <main >
-      <div className="flex flex-col gap-20">
-      <SocialMedia />
+      <div className="flex flex-col ">
+        <SocialMedia />
         <Hero />
-        <AboutSection />
-        <Skills />
         <Projects />
+        <AboutSection />
+        {/* //<Skills /> */}
+        
         <Contact />
       </div>
     </main>
