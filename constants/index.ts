@@ -11,42 +11,31 @@ export const  tags = [
   { title: "AI Explorer" },
 ];
 
-
 export const experiences = [
   // CTFs
   {
     id: 1,
     category: 'ctf',
     title: 'CTF SheSecure',
-    description: 'Achieved 2nd place in the SheSecure CTF competition.',
+    description: 'Logré el 2° lugar en SheSecure CTF, destacando en desafíos de ciberseguridad ofensiva y explotación de vulnerabilidades.',
     image: '/ctf_shesecure_1.jpg',
-    additionalImages: [
-      '/ctf_shesecure_1.jpg',
-      '/ctf_shesecure_2.jpg',
-      '/ctf_shesecure_3.jpg',
-      '/ctf_shesecure_4.jpg'
-    ],
+    additionalImages: ['/ctf_shesecure_1.jpg', '/ctf_shesecure_2.jpg', '/ctf_shesecure_3.jpg', '/ctf_shesecure_4.jpg'],
     date: 'June 2024'
   },
   {
     id: 2,
     category: 'ctf',
-    title: 'Prima AFP y Pacífico Seguros CTF',
-    description: 'Top 10 and invited to the offices to compete in person.',
+    title: 'Prima AFP & Pacífico Seguros CTF',
+    description: 'Top 10 y clasificado a la final presencial en las oficinas de la empresa, destacando en análisis forense y explotación de vulnerabilidades.',
     image: '/ctf_pacifico_1.jpg',
-    additionalImages: [
-      '/ctf_pacifico_1.jpg',
-      '/ctf_pacifico_2.jpg',
-      '/ctf_pacifico_3.jpg',
-      '/ctf_pacifico_4.jpg'
-    ],
+    additionalImages: ['/ctf_pacifico_1.jpg', '/ctf_pacifico_2.jpg', '/ctf_pacifico_3.jpg', '/ctf_pacifico_4.jpg'],
     date: 'April 2024'
   },
   {
     id: 3,
     category: 'ctf',
     title: 'CTF The Weekend Hack',
-    description: 'My team achieved 2nd place.',
+    description: '2° lugar con mi equipo en The Weekend Hack, resolviendo desafíos avanzados de ciberseguridad y captura de banderas.',
     image: '/ctf_twh_1.jpg',
     additionalImages: ['/ctf_twh_1.jpg', '/ctf_twh_2.jpg'],
     date: 'July 2024'
@@ -56,195 +45,128 @@ export const experiences = [
     id: 4,
     category: 'hackathons',
     title: 'Hackathon Ayni',
-    description: ' We were one of the three groups invited to compete in person at the Lima headquarters.',
+    description: 'Top 3 en la sede de Lima con una plataforma innovadora para mujeres emprendedoras, destacando entre más de 60 equipos.',
     image: '/hackathon_ayni_1.jpg',
-    additionalImages: [
-      '/hackathon_ayni_1.jpg',
-      '/hackathon_ayni_2.jpg',
-      '/hackathon_ayni_3.jpg',
-      '/hackathon_ayni_4.jpg',
-      '/hackathon_ayni_5.jpg',
-      '/hackathon_ayni_6.jpg',
-      '/hackathon_ayni_7.jpg'
-    ],
+    additionalImages: ['/hackathon_ayni_1.jpg', '/hackathon_ayni_2.jpg', '/hackathon_ayni_3.jpg', '/hackathon_ayni_4.jpg', '/hackathon_ayni_5.jpg', '/hackathon_ayni_6.jpg', '/hackathon_ayni_7.jpg'],
     date: 'November 2024'
-  },
-  {
-    id: 5,
-    category: 'hackathons',
-    title: 'Hackathon Belcorp 2023',
-    description: 'We successfully advanced to the second stage.',
-    image: '/hackathon_belcorp_1.jpg',
-    additionalImages: ['/hackathon_belcorp_1.jpg', '/hackathon_belcorp_2.jpg', '/hackathon_belcorp_3.jpg'],
-    date: 'October 2023'
   },
   {
     id: 6,
     category: 'hackathons',
     title: 'Hackathon EmpoderaTech 2024',
-    description: 'I was part of the winning team that developed YUPI',
+    description: '1° lugar con YUPI, una solución tecnológica para impulsar la educación y accesibilidad.',
     image: '/hackathon_empoderatech_1.jpg',
-    additionalImages: [
-      '/hackathon_empoderatech_1.jpg',
-      '/hackathon_empoderatech_2.jpg',
-      '/hackathon_empoderatech_4.jpg',
-      '/hackathon_empoderatech_5.jpg',
-      '/hackathon_empoderatech_6.jpg',
-      '/hackathon_empoderatech_7.jpg',
-    ],
+    additionalImages: ['/hackathon_empoderatech_1.jpg', '/hackathon_empoderatech_2.jpg', '/hackathon_empoderatech_4.jpg', '/hackathon_empoderatech_5.jpg', '/hackathon_empoderatech_6.jpg', '/hackathon_empoderatech_7.jpg'],
     date: 'December 2024'
   },
   {
     id: 7,
     category: 'hackathons',
     title: 'NASA Space Apps Challenge Ayacucho 2024',
-    description: ' We achieved 2nd place in Ayacucho and were nominated for global recognition.',
+    description: '2° lugar en la sede de Ayacucho y nominados al reconocimiento global con una solución innovadora en exploración espacial.',
     image: '/hackathon_nasa_1.jpg',
-    additionalImages: [
-      '/hackathon_nasa_1.jpg',
-      '/hackathon_nasa_2.jpg',
-      '/hackathon_nasa_3.jpg',
-      '/hackathon_nasa_4.jpg',
-      '/hackathon_nasa_5.jpg'
-    ],
+    additionalImages: ['/hackathon_nasa_1.jpg', '/hackathon_nasa_2.jpg', '/hackathon_nasa_3.jpg', '/hackathon_nasa_4.jpg', '/hackathon_nasa_5.jpg'],
     date: 'October 2024'
   },
   {
     id: 8,
     category: 'hackathons',
     title: 'Hackathon Reto Digital RIMAC',
-       description: 'We won the competition and I was responsible for developing the front-end.', 
-       image: '/hackathon_rimac_1.jpg',
-    additionalImages: [
-      '/hackathon_rimac_1.jpg',
-      '/hackathon_rimac_2.jpg',
-      '/hackathon_rimac_3.jpg',
-      '/hackathon_rimac_4.jpg',
-      '/hackathon_rimac_5.jpg'
-    ],
+    description: '1° lugar con una solución disruptiva, liderando el desarrollo del front-end.',
+    image: '/hackathon_rimac_1.jpg',
+    additionalImages: ['/hackathon_rimac_1.jpg', '/hackathon_rimac_2.jpg', '/hackathon_rimac_3.jpg', '/hackathon_rimac_4.jpg', '/hackathon_rimac_5.jpg'],
     date: 'June 2024'
   },
   // Volunteer
   {
     id: 9,
     category: 'volunteer',
-    title: ' CiberSecUNI 2024',
-        description: ' Assisted in the registration of attendees.', 
-        image: '/voluntariado_cibersec_1.jpg',
-    additionalImages: [
-      '/voluntariado_cibersec_1.jpg',
-      '/voluntariado_cibersec_2.jpg',
-      '/voluntariado_cibersec_3.jpg',
-      '/voluntariado_cibersec_4.jpg'
-    ],
+    title: 'CiberSecUNI 2024',
+    description: 'Apoyé en la gestión y registro de asistentes en un evento de ciberseguridad, facilitando la organización y logística.',
+    image: '/voluntariado_cibersec_1.jpg',
+    additionalImages: ['/voluntariado_cibersec_1.jpg', '/voluntariado_cibersec_2.jpg', '/voluntariado_cibersec_3.jpg', '/voluntariado_cibersec_4.jpg'],
     date: 'November 2024'
   },
   {
     id: 10,
     category: 'volunteer',
     title: 'Lima DevFest 2024',
-       description: 'Contributed to the registration of attendees and collected feedback from attendees about the speakers.', 
-       image: '/voluntariado_devfest_1.jpg',
-    additionalImages: [
-      '/voluntariado_devfest_1.jpg',
-      '/voluntariado_devfest_2.jpg',
-      '/voluntariado_devfest_3.jpg',
-      '/voluntariado_devfest_4.jpg'
-    ],
+    description: 'Colaboré en la organización del evento, gestionando el registro y recopilando feedback de los asistentes.',
+    image: '/voluntariado_devfest_1.jpg',
+    additionalImages: ['/voluntariado_devfest_1.jpg', '/voluntariado_devfest_2.jpg', '/voluntariado_devfest_3.jpg', '/voluntariado_devfest_4.jpg'],
     date: 'November 2024'
   },
   {
     id: 11,
-    category: 'programming',
+    category: 'ctf',
     title: 'Programming Training Camp',
-    description: 'Attended an advanced training camp focused on competitive programming.',
+    description: 'Entrenamiento avanzado en programación competitiva, mejorando habilidades en algoritmos y estructuras de datos.',
     image: '/pc_trainingcamp_1.jpg',
     additionalImages: ['/pc_trainingcamp_1.jpg', '/pc_trainingcamp_2.jpg'],
     date: 'August 2024'
+  },
+  {
+    id: 12,
+    category: 'events',
+    title: 'Deloitte Cybersecurity Bootcamp',
+    description: 'Bootcamp intensivo de ciberseguridad, analizando riesgos y simulando respuestas ante amenazas.',
+    image: '/evento_deloitte_1.jpg',
+    additionalImages: ['/evento_deloitte_1.jpg', '/evento_deloitte_2.jpg', '/evento_deloitte_3.jpg', '/evento_deloitte_4.jpg'],
+    date: 'May 2024'
+  },
+  {
+    id: 13,
+    category: 'events',
+    title: 'Evento Globant',
+    description: 'Participé en charlas sobre tendencias en software y mejores prácticas de desarrollo impartidas por expertos de Globant.',
+    image: '/evento_globant_1.jpg',
+    additionalImages: ['/evento_globant_1.jpg', '/evento_globant_2.jpg', '/evento_globant_3.jpg', '/evento_globant_4.jpg'],
+    date: 'November 2024'
+  },
+  {
+    id: 14,
+    category: 'events',
+    title: 'Evento IBM',
+    description: 'Exploré los últimos avances en computación en la nube e inteligencia artificial en un evento de IBM.',
+    image: '/evento_ibm_1.jpg',
+    additionalImages: ['/evento_ibm_1.jpg', '/evento_ibm_2.jpg', '/evento_ibm_3.jpg'],
+    date: 'October 2024'
+  },
+  {
+    id: 15,
+    category: 'events',
+    title: 'Evento Microsoft',
+    description: 'Participé en workshops prácticos y demostraciones tecnológicas presentadas por expertos de Microsoft.',
+    image: '/evento_microsoft_1.jpg',
+    additionalImages: ['/evento_microsoft_1.jpg', '/evento_microsoft_2.jpg', '/evento_microsoft_3.jpg', '/evento_microsoft_4.jpg', '/evento_microsoft_5.jpg', '/evento_microsoft_6.jpg'],
+    date: 'September 2024'
+  },
+  {
+    id: 16,
+    category: 'events',
+    title: 'Evento NTT Data',
+    description: 'Descubrí soluciones tecnológicas innovadoras y estrategias empresariales en un evento de NTT Data.',
+    image: '/evento_nttdata_1.jpg',
+    additionalImages: ['/evento_nttdata_1.jpg', '/evento_nttdata_2.jpg', '/evento_nttdata_3.jpg', '/evento_nttdata_4.jpg'],
+    date: 'August 2024'
   }
-  // },
-  // {
-  //   id: 12,
-  //   category: 'events',
-  //   title: 'Deloitte Cibersecurity Bootcamp',
-  //       description: 'Engaged in a cybersecurity bootcamp where we analyzed risks and simulated startup roles to strategize responses to risk scenarios.',image: '/evento_deloitte_1.jpg',
-  //   additionalImages: [
-  //     '/evento_deloitte_1.jpg',
-  //     '/evento_deloitte_2.jpg',
-  //     '/evento_deloitte_3.jpg',
-  //     '/evento_deloitte_4.jpg'
-  //   ],
-  //   date: 'May 2024'
-  // },
-  // {
-  //   id: 13,
-  //   category: 'events',
-  //   title: 'Evento Globant',
-  //   description: 'Explored software trends and development practices during Globant talks.',
-  //   image: '/evento_globant_1.jpg',
-  //   additionalImages: [
-  //     '/evento_globant_1.jpg',
-  //     '/evento_globant_2.jpg',
-  //     '/evento_globant_3.jpg',
-  //     '/evento_globant_4.jpg'
-  //   ],
-  //   date: 'November 2023'
-  // },
-  // {
-  //   id: 14,
-  //   category: 'events',
-  //   title: 'Evento IBM',
-  //   description: 'Learned about the latest advancements in cloud computing and AI.',
-  //   image: '/evento_ibm_1.jpg',
-  //   additionalImages: ['/evento_ibm_1.jpg', '/evento_ibm_2.jpg', '/evento_ibm_3.jpg'],
-  //   date: 'October 2023'
-  // },
-  // {
-  //   id: 15,
-  //   category: 'events',
-  //   title: 'Evento Microsoft',
-  //   description: 'Engaged in hands-on workshops and tech demos by Microsoft experts.',
-  //   image: '/evento_microsoft_1.jpg',
-  //   additionalImages: [
-  //     '/evento_microsoft_1.jpg',
-  //     '/evento_microsoft_2.jpg',
-  //     '/evento_microsoft_3.jpg',
-  //     '/evento_microsoft_4.jpg',
-  //     '/evento_microsoft_5.jpg',
-  //     '/evento_microsoft_6.jpg'
-  //   ],
-  //   date: 'September 2023'
-  // },
-  // {
-  //   id: 16,
-  //   category: 'events',
-  //   title: 'Evento NTT Data',
-  //   description: 'Explored innovative solutions and technology at NTT Data events.',
-  //   image: '/evento_nttdata_1.jpg',
-  //   additionalImages: [
-  //     '/evento_nttdata_1.jpg',
-  //     '/evento_nttdata_2.jpg',
-  //     '/evento_nttdata_3.jpg',
-  //     '/evento_nttdata_4.jpg'
-  //   ],
-  //   date: 'August 2023'
-
 ];
+
+
 
 
 export const categories = [
   
   { id: 'hackathons', name: 'Hackathons', icon: FaLaptopCode },
-  { id: 'ctf', name: 'CTF Competitions', icon: FaCode },
+  { id: 'ctf', name: 'Competitions', icon: FaCode },
   { id: 'volunteer', name: 'Volunteer Work', icon: FaHandsHelping },
-  //{ id: 'events', name: 'Tech Events', icon: FaCalendarAlt },
-  { id: 'programming', name: 'Programming', icon: FaGraduationCap },
+  { id: 'events', name: 'Tech Events', icon: FaCalendarAlt }, 
 ];
 
 
 export const COLORS = {
   glass: 'rgba(88, 128, 97, 0.15)',
-  primary: '#588061',
+  primary: '#869F77',
   secondary: '#869F77',
   accent: '#E7B5AC',
   highlight: '#FDE9EA',
@@ -339,8 +261,27 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    "title": "AlliA",
+    "description": "Plataforma de generación de contenido a partir de noticias impulsada por IA que permite a los usuarios crear contenido atractivo, analizar tendencias y exportar en varios formatos.",
+    "technologies": [ { "name": "NextJs" }, 
+      { "name": "Django" },
+      { "name": "MySQL" }, 
+      { "name": "Vectara" }, 
+        { "name": "Docker" }, 
+      { "name": "AWS" },
+    
+     
+      { "name": "DALL·E" }, { "name": "OpenAI" },{ "name": "Grok" },
+      { "name": "SerpApi" }
+    ],
+    "githubLink": "https://github.com/Loomin-Team/allia-frontend",
+    "liveDemoLink": "https://allia-frontend.vercel.app/",
+    "image": "/project_allia.jpg",
+    "type": "ai"
+  },
+  {
     "title": "Evergrow",
-    "description": "A mobile app leveraging real-time satellite data to help farmers optimize decisions, reduce risks, and boost crop yields with a user-friendly interface.",
+    "description": "Una aplicación móvil que aprovecha datos satelitales en tiempo real para ayudar a los agricultores a optimizar decisiones, reducir riesgos y mejorar los rendimientos de los cultivos con una interfaz intuitiva.",
     "technologies": [
       { "name": "Node.js" },
       { "name": "React Native" },
@@ -354,23 +295,8 @@ export const projects: Project[] = [
     "type": "mobile"
   },
   {
-    "title": "AlliA",
-    "description": "An AI-powered content generation platform that allows users to create compelling content, analyze trends, and export in various formats for erse industries.",
-    "technologies": [
-      { "name": "Python" },
-      { "name": "TensorFlow" },
-      { "name": "React" },
-      { "name": "MongoDB" },
-      { "name": "AWS" }
-    ],
-    "githubLink": "https://github.com/Loomin-Team/allia-frontend",
-    "liveDemoLink": "https://allia-frontend.vercel.app/",
-    "image": "/project_allia.jpg",
-    "type": "ai"
-  },
-  {
     "title": "UPet",
-    "description": "An innovative mobile app that connects pet owners with certified veterinarians, digitizes pet medical records, and provides reminders to simplify pet care.",
+    "description": "Una aplicación móvil que conecta a dueños de mascotas con veterinarios certificados, digitaliza los historiales médicos de las mascotas y proporciona recordatorios para facilitar su cuidado.",
     "technologies": [
       { "name": "React Native" },
       { "name": "Firebase" },
