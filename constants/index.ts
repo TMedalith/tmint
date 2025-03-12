@@ -56,7 +56,7 @@ export const experiences = [
     title: 'Hackathon EmpoderaTech 2024',
     description: '1° lugar con YUPI, una solución tecnológica para impulsar la educación y accesibilidad.',
     image: '/hackathon_empoderatech_1.jpg',
-    additionalImages: ['/hackathon_empoderatech_1.jpg', '/hackathon_empoderatech_2.jpg', '/hackathon_empoderatech_4.jpg', '/hackathon_empoderatech_5.jpg', '/hackathon_empoderatech_6.jpg', '/hackathon_empoderatech_7.jpg'],
+    additionalImages: [  '/hackathon_empoderatech_2.jpg', '/hackathon_empoderatech_4.jpg', '/hackathon_empoderatech_5.jpg', '/hackathon_empoderatech_6.jpg'],
     date: 'December 2024'
   },
   {
