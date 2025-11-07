@@ -7,18 +7,17 @@ interface SectionHeaderProps {
 
 const SectionHeader: React.FC<SectionHeaderProps> = ({ title, description }) => {
   return (
-    <div className="text-center mt-20  ">
-      <h2 className="text-4xl md:text-6xl  font-bold  text-transparent bg-clip-text  bg-[#869F77]   ">
+    <div className="space-y-8 mb-20">
+      <h2 className="text-5xl md:text-7xl font-black text-cream-white tracking-tighter uppercase">
         {title}
       </h2>
-      <p className="text-white/60 text-lg md:text-xl max-w-2xl mx-auto">
-        {description}
-      </p>
+      <div className="flex items-start gap-8">
+        <div className="w-24 h-1 bg-electric-lime mt-4"></div>
+        <p className="text-lg text-cream-white/70 max-w-2xl leading-relaxed">
+          {description}
+        </p>
+      </div>
     </div>
-
-
-
-    
   );
 };
 

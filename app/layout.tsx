@@ -1,18 +1,17 @@
 
 import type { Metadata } from "next";
-import { Nunito } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import { ShootingStars } from "@/components/ui/shooting-stars";
-import { SparklesCore } from "@/components/ui/sparkles";
 import SocialMedia from "@/components/layout/SocialMedia";
+import { ThemeProvider } from "@/components/providers/ThemeProvider";
 
-const nunito = Nunito({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Space Portfolio",
-  description: "This is my portfolio",
+  title: "Tatiana Paucar | Portfolio",
+  description: "Portfolio de Tatiana Medalith Paucar De La Cruz - Software Engineering Student",
 };
 
 export default function RootLayout({
@@ -21,27 +20,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="es" suppressHydrationWarning>
       <body
-        className={`${nunito.className} bg-[#030014]  overflow-y-scroll overflow-x-hidden relative min-h-screen`}
+        className={`${inter.className} bg-white dark:bg-deep-black overflow-y-scroll overflow-x-hidden relative min-h-screen transition-colors duration-300`}
       >
-        <div className="fixed inset-0 z-0">
-          <ShootingStars />
-          <SparklesCore
-          id="tsparticlesfullpage"
-          background="transparent"
-          minSize={0.3}
-          maxSize={0.5}
-          particleDensity={150}
-          className="w-full h-full"
-          particleColor="#FFFFFF"
-        />
-        </div>
-         <Navbar />
-        <div className="relative w-full pt-20 px-14 md:px-24 z-10">
-          {children}
-        </div>
-        <Footer />
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          <Navbar />
+          <SocialMedia />
+          <main className="relative w-full">
+            {children}
+          </main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -1,87 +1,68 @@
 "use client";
 import { useState } from 'react';
 import { experiences, categories } from '@/constants';
-import type { Experience } from '@/types';
-import { Button } from '@/components/ui/button';
 import { ExperienceCard } from '@/components/widgets/ExperienceCard';
-import ImageModal from '@/components/widgets/ImageModal';
-import { cn } from '@/lib/utils';
-import { useGsapAnimations } from '@/hooks';
 
 export default function About() {
   const [selectedCategory, setSelectedCategory] = useState('hackathons');
-  const [selectedImage, setSelectedImage] = useState<Experience | null>(null);
-  
-  const refs = useGsapAnimations(selectedCategory);
 
   const sortedExperiences = experiences
     .filter((exp) => exp.category === selectedCategory)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   return (
-    <div className="min-h-screen w-full pb-16 pt-20">
-      <section
-        ref={refs.hero}
-        className="mx-auto mb-16 max-w-7xl px-4 sm:px-6 lg:px-8"
-      >
-        <h1 className="mb-6 text-center text-5xl font-bold text-white md:text-6xl">
-          My Journey in <span className="text-[#869F77]">Software Engineering</span>
-        </h1>
-        <p className="mx-auto max-w-3xl text-center text-lg text-neutral-300">
-          As a Software Engineering student at UPC, I constantly seek to expand
-          the boundaries of what is possible through code.
-        </p>
-      </section>
+    <div className="min-h-screen py-32 px-6 md:px-16 lg:px-24 bg-deep-black">
+      <div className="max-w-7xl mx-auto">
+        {/* Section Header - Bold & Minimalist */}
+        <div className="mb-20 animate-fade-in">
+          <div className="flex items-center gap-4 mb-8">
+            <div className="w-2 h-2 bg-electric-lime"></div>
+            <span className="text-xs font-bold text-cream-white/60 uppercase tracking-widest">
+              Trayectoria
+            </span>
+          </div>
 
-      <section className="mx-auto mb-12 max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div 
-          className={cn("flex flex-wrap justify-center gap-4")} 
-          ref={refs.categories}
-        >
+          <h1 className="text-5xl md:text-7xl font-black text-cream-white mb-6 tracking-tighter">
+            MIS EXPERIENCIAS
+          </h1>
+
+          <div className="flex items-start gap-8">
+            <div className="w-24 h-1 bg-electric-lime mt-4"></div>
+            <p className="text-lg text-cream-white/70 max-w-2xl leading-relaxed">
+              Mi participación en hackathons, CTFs, voluntariados y eventos tecnológicos
+            </p>
+          </div>
+        </div>
+
+        {/* Category Filters - Brutalist */}
+        <div className="flex flex-wrap gap-3 mb-16">
           {categories.map(({ id, name, icon: Icon }) => (
-            <Button
+            <button
               key={id}
-              variant="button"
               onClick={() => setSelectedCategory(id)}
-              className={cn(
-                'transition-all duration-300 ease-in-out !px-6 !py-3',
+              className={`px-6 py-3 font-black transition-all flex items-center gap-3 uppercase tracking-wider text-sm ${
                 selectedCategory === id
-                  ? 'bg-[#869F77] text-white shadow-lg scale-105'
-                  : '!bg-[#869F77]/10 text-neutral-200 hover:!bg-[#869F77]/20'
-              )}
-              showArrow={false}
+                  ? 'bg-electric-lime text-deep-black'
+                  : 'bg-deep-black border-2 border-cream-white/30 text-cream-white hover:border-electric-lime'
+              }`}
             >
               <Icon className="h-5 w-5" />
               {name}
-            </Button>
+            </button>
           ))}
         </div>
-      </section>
 
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div
-          className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
-          ref={refs.cards}
-        >
-          {sortedExperiences.map((experience) => (
+        {/* Experiences Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {sortedExperiences.map((experience, index) => (
             <ExperienceCard
               key={experience.id}
               experience={experience}
-              onClick={() => setSelectedImage(experience)}
+              index={index}
             />
           ))}
         </div>
-      </section>
-
-      {selectedImage && (
-        <ImageModal
-        images={selectedImage.additionalImages}
-        title={selectedImage.title}
-        description={selectedImage.description}
-        date={selectedImage.date}
-        onClose={() => setSelectedImage(null)}
-      />
-      )}
+      </div>
     </div>
   );
 }
