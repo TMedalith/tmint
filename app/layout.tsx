@@ -1,17 +1,23 @@
-
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Playfair_Display, DM_Sans } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-import SocialMedia from "@/components/layout/SocialMedia";
-import { ThemeProvider } from "@/components/providers/ThemeProvider";
 
-const inter = Inter({ subsets: ["latin"] });
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
+});
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-dm-sans",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
-  title: "Tatiana Paucar | Portfolio",
-  description: "Portfolio de Tatiana Medalith Paucar De La Cruz - Software Engineering Student",
+  title: "Tatiana Paucar — Software Engineer",
+  description:
+    "Software Engineer crafting backend systems, cloud infrastructure & AI-powered solutions.",
 };
 
 export default function RootLayout({
@@ -20,18 +26,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es" suppressHydrationWarning>
+    <html lang="en">
       <body
-        className={`${inter.className} bg-white dark:bg-deep-black overflow-y-scroll overflow-x-hidden relative min-h-screen transition-colors duration-300`}
+        className={`${playfair.variable} ${dmSans.variable} font-sans antialiased`}
       >
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-          <Navbar />
-          <SocialMedia />
-          <main className="relative w-full">
-            {children}
-          </main>
-          <Footer />
-        </ThemeProvider>
+        <div className="relative z-10">{children}</div>
       </body>
     </html>
   );

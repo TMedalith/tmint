@@ -1,28 +1,12 @@
-import { IconType } from 'react-icons';
-
-// ============================================
-// EXPERIENCE TYPES
-// ============================================
-
 export interface Experience {
   id: number;
-  category: 'hackathons' | 'ctf' | 'volunteer' | 'events';
+  category: "hackathons" | "ctf" | "volunteer" | "bootcamps";
   title: string;
   description: string;
   image: string;
   additionalImages: string[];
   date: string;
 }
-
-export interface ExperienceCategory {
-  id: Experience['category'];
-  name: string;
-  icon: IconType;
-}
-
-// ============================================
-// PROJECT TYPES
-// ============================================
 
 export interface Technology {
   name: string;
@@ -35,42 +19,41 @@ export interface Project {
   githubLink: string;
   liveDemoLink: string;
   image: string;
-  type: 'fullstack' | 'frontend' | 'backend' | 'mobile' | 'ai';
+  type: string;
 }
 
-export interface ProjectType {
-  id: string;
+export interface WorkExperience {
+  company: string;
+  role: string;
+  period: string;
+  highlights: string[];
+}
+
+export interface Stat {
+  value: string;
   label: string;
 }
 
-// ============================================
-// CONTACT TYPES
-// ============================================
-
-export interface ContactLink {
-  href: string;
-  icon: IconType;
-  label: string;
+export interface Achievement {
+  icon: string;
   text: string;
 }
 
-// ============================================
-// SKILL TYPES
-// ============================================
-
-export enum SkillLevel {
-  Expert = 100,
-  Advanced = 75,
-  Intermediate = 50,
-  Beginner = 25,
-}
-
-export interface Skill {
-  icon: IconType;
-  level: SkillLevel;
+export interface Certification {
+  name: string;
+  issuer: string;
+  year: string;
 }
 
 export interface SkillCategory {
-  icon: IconType;
+  category: string;
   skills: string[];
+}
+
+export interface Education {
+  institution: string;
+  degree: string;
+  period: string;
+  note: string;
+  courses: string[];
 }

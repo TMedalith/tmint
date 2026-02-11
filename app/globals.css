@@ -1,66 +1,105 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-:root {
-  /* Brutalist Minimalist - 3 Colors */
-  --deep-black: #0A0A0A;
-  --cream-white: #F5F5F0;
-  --electric-lime: #BFFF0B;
+@theme {
+  --font-sans: var(--font-dm-sans), system-ui, sans-serif;
+  --font-serif: var(--font-playfair), Georgia, serif;
+
+  --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
+
+  /* ── Dark slate + rose ────────────────── */
+  --color-base: #0f172a;
+  --color-surface: rgba(30, 41, 59, 0.5);
+  --color-surface-2: rgba(51, 65, 85, 0.4);
+  --color-surface-3: #334155;
+  --color-text: #e2e8f0;
+  --color-text-secondary: #94a3b8;
+  --color-text-muted: #64748b;
+
+  /* ── Accent — rose pink ───────────────── */
+  --color-accent: #f472b6;
+  --color-accent-dim: #ec4899;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* ── Base with gradient + grain ───────────── */
 html {
   scroll-behavior: smooth;
-  background: var(--deep-black);
+  scroll-padding-top: 5rem;
 }
 
 body {
-  background: var(--deep-black);
-  color: var(--cream-white);
-  font-family: 'Inter', system-ui, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(160deg, #0a0f1a 0%, #131028 45%, #170f22 65%, #0a0f1a 100%);
+  background-attachment: fixed;
+  color: var(--color-text);
+  overflow-x: hidden;
+  min-height: 100vh;
 }
 
-/* Custom Scrollbar - Minimalist */
-::-webkit-scrollbar {
-  width: 8px;
+/* Grain texture overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px 200px;
 }
 
-::-webkit-scrollbar-track {
-  background: var(--deep-black);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--electric-lime);
-  border-radius: 0;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--cream-white);
-}
-
-/* Selection */
+/* ── Selection ────────────────────────────── */
 ::selection {
-  background: var(--electric-lime);
-  color: var(--deep-black);
+  background: rgba(244, 114, 182, 0.3);
+  color: #fdf2f8;
 }
 
-/* Utility Classes */
-.brutalist-border {
-  border: 2px solid var(--cream-white);
+/* ── Scrollbar ────────────────────────────── */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #334155; border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-accent); }
+
+/* Firefox */
+* { scrollbar-width: thin; scrollbar-color: #334155 transparent; }
+
+/* ── Glassmorphism card (refined) ──────────── */
+.card {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 1rem;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card:hover {
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border-color: rgba(244, 114, 182, 0.12);
+  transform: translateY(-2px);
 }
 
-.accent-border {
-  border: 3px solid var(--electric-lime);
+/* ── Gradient text ────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, #f472b6, #ec4899, #db2777);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.text-balance {
-  text-wrap: balance;
+/* ── Active nav indicator ─────────────────── */
+.nav-active { color: var(--color-accent); }
+
+/* ── Spotlight keyframe ──────────────────── */
+@keyframes spotlight {
+  0% { opacity: 0; transform: translate(-72%, -62%) scale(0.5); }
+  100% { opacity: 1; transform: translate(-50%, -40%) scale(1); }
+}
+
+/* ── Infinite scroll animation ──────────── */
+@keyframes scroll {
+  to { transform: translate(calc(-50% - 0.5rem)); }
+}
+
+.animate-scroll {
+  animation: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
 }
