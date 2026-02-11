@@ -103,3 +103,8 @@ body::before {
 .animate-scroll {
   animation: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
 }
+
+/* ── Safe area for mobile devices ──────── */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}

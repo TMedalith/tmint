@@ -1,13 +1,3 @@
-export interface Experience {
-  id: number;
-  category: "hackathons" | "ctf" | "volunteer" | "bootcamps";
-  title: string;
-  description: string;
-  image: string;
-  additionalImages: string[];
-  date: string;
-}
-
 export interface Technology {
   name: string;
 }
@@ -29,22 +19,6 @@ export interface WorkExperience {
   highlights: string[];
 }
 
-export interface Stat {
-  value: string;
-  label: string;
-}
-
-export interface Achievement {
-  icon: string;
-  text: string;
-}
-
-export interface Certification {
-  name: string;
-  issuer: string;
-  year: string;
-}
-
 export interface SkillCategory {
   category: string;
   skills: string[];
@@ -57,3 +31,4 @@ export interface Education {
   note: string;
   courses: string[];
 }
+

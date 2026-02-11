@@ -1,12 +1,8 @@
 import type {
   Project,
   WorkExperience,
-  Stat,
-  Achievement,
-  Certification,
   SkillCategory,
   Education,
-  Experience,
 } from "@/types";
 
 /* ─── Site config ──────────────────────────────── */
@@ -21,12 +17,7 @@ export const siteConfig = {
   },
 };
 
-/* ─── Proof bar (hero) ─────────────────────────── */
-export const highlights = [
-  "NASA Space Apps Global Finalist",
-  "SWE Intern @ DOMUSAI",
-  "Top 5th at UPC",
-];
+
 
 /* ─── Work experience ─────────────────────────── */
 export const workExperience: WorkExperience[] = [
@@ -35,9 +26,9 @@ export const workExperience: WorkExperience[] = [
     role: "Software Engineer Intern",
     period: "Jan 2025 — Jun 2025",
     highlights: [
-      "Built an event-driven WhatsApp notification pipeline for 200+ active users — my first production system that real people depended on daily.",
-      "Migrated 10+ serverless functions from Supabase to NestJS, untangling spaghetti logic into maintainable services.",
-      "Shipped responsive front-end features with React and Next.js across mobile and desktop.",
+      "Built a WhatsApp notification system that 200+ people actually use every day. First time shipping something to real users.",
+      "Cleaned up 10+ messy serverless functions and moved them to NestJS. Way easier to maintain now.",
+      "Built responsive features with React and Next.js. Works on phones, tablets, whatever.",
     ],
   },
 ];
@@ -47,7 +38,7 @@ export const projects: Project[] = [
   {
     title: "Memoralab",
     description:
-      "Started because I wanted to make NASA's space biology research actually searchable. Built a RAG pipeline (LlamaIndex + Qdrant) over 600+ papers so anyone can query in natural language and get real answers. Python/FastAPI backend on AWS Fargate with Docker. Our team made it to the Global Finals — top 45 out of 10,000+ teams.",
+      "Built a tool that lets users ask natural language questions over 600+ NASA papers and get precise answers. Developed the backend with Python and FastAPI, the frontend with Next.js, and used LlamaIndex and Qdrant to index the papers. Deployed on AWS Fargate, creating an efficient and scalable system to access complex information.",
     technologies: [
       { name: "Python" },
       { name: "FastAPI" },
@@ -66,12 +57,13 @@ export const projects: Project[] = [
   {
     title: "Banking System",
     description:
-      "I wanted to understand how real banks handle money at scale, so I built it from scratch. Reactive microservices for accounts, transactions, and transfers using Spring WebFlux on MongoDB. Wrote tests obsessively — 85%+ coverage with JUnit 5 and Mockito.",
+      "To understand how banks handle transactions, I developed reactive microservices with Spring Boot and Spring WebFlux, using MySQL and MongoDB to manage different data layers. Covered accounts, transfers, and critical logic, and ensured reliability with tests exceeding 85% coverage.",
     technologies: [
       { name: "Java" },
       { name: "Spring Boot" },
       { name: "Spring WebFlux" },
       { name: "MongoDB" },
+      { name: "MySQL" },
       { name: "JUnit 5" },
       { name: "Mockito" },
     ],
@@ -82,9 +74,7 @@ export const projects: Project[] = [
   },
 ];
 
-/* ─── About bio (used in hero subtitle) ────────── */
-export const aboutBio =
-  "I discovered programming in high school when a teacher showed me how code could control physical objects. That moment hooked me. I studied Software Engineering and threw myself into it — leading tech communities, building student projects, and eventually becoming a Global Finalist at NASA Space Apps Challenge 2025. Now I focus on backend development and integrating AI into applications. I'm comfortable figuring things out as I go, and I stick with projects until they work.";
+
 
 /* ─── Education ────────────────────────────────── */
 export const education: Education = {
@@ -119,30 +109,4 @@ export const skills: SkillCategory[] = [
   },
 ];
 
-/* ─── Achievements + Leadership (merged) ───────── */
-export const achievements: Achievement[] = [
-  { icon: "trophy", text: "Global Finalist (Top 45 / 10,000+) — NASA Space Apps Challenge 2025" },
-  { icon: "trophy", text: "1st Place — RIMAC Hackathon 2024" },
-  { icon: "trophy", text: "1st Place — EmpoderaTech Hackathon 2024" },
-  { icon: "medal", text: "2nd Place — CTF She Secure Peru 2024" },
-  { icon: "star", text: "HackerRank — 5★ Problem Solving" },
-  { icon: "globe", text: "Chapter Development Director — LEAD UPC 2025, organized 5+ tech events" },
-  { icon: "globe", text: "Webmaster — IEEE Computer Society UPC 2025, built official landing page" },
-  { icon: "globe", text: "Logistics Coordinator — CibersecUni, Lima DevFest, AWSome Women Summit" },
-];
 
-/* ─── Why Technology ──────────────────────────── */
-export const whyTechnology = [
-  "I grew up in Lima watching how a single app could change whether a family gets a loan, finds a doctor, or sells their harvest. That gap between the people who need tools and the people who build them — that's where I want to be.",
-  "My first hackathon changed everything. 48 hours without sleeping, building something from nothing under pressure — and it didn't feel like sacrifice. It felt like the first time I was fully awake. I won that one, then the next, and eventually made it to the NASA Space Apps global finals with a team I believed in.",
-  "What drives me isn't the trophy. It's the moment a system clicks — when you trace a bug through three microservices at 2 a.m. and finally understand why the queue was dropping messages. That feeling of mastery over complexity is what I'm chasing.",
-  "I want to build infrastructure so reliable that millions of people depend on it without ever knowing my name. That's the kind of impact I'm after.",
-];
-
-/* ─── Data kept for backward compat (unused) ───── */
-export const certifications: Certification[] = [];
-export const extracurriculars: string[] = [];
-export const categories = [
-  { id: "hackathons", name: "Hackathons" },
-] as const;
-export const experiences: Experience[] = [];

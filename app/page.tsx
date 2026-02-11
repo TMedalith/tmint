@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
-import { Github, Linkedin, Mail, ArrowUpRight, User, FolderKanban, Briefcase, Wrench, Camera } from "lucide-react";
+import { GithubIcon, LinkedinIcon, Mail, ArrowUpRight, User, FolderKanban, Briefcase, Wrench, Camera } from "lucide-react";
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 import {
   projects,
@@ -11,7 +11,6 @@ import {
   skills,
   education,
   siteConfig,
-  aboutBio,
 } from "@/data";
 
 /* ── animation ────────────────────────────────── */
@@ -72,14 +71,14 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="mb-6"
+            className="mb-6 group"
           >
             <Image
               src="/tmint.png"
               alt={siteConfig.name}
-              width={160}
-              height={160}
-              className="rounded-full ring-4 ring-accent/20 shadow-lg shadow-accent/10"
+              width={140}
+              height={140}
+              className="rounded-full ring-4 ring-accent/20 shadow-lg shadow-accent/10 group-hover:ring-accent/40 group-hover:scale-105 transition-all duration-300"
               priority
             />
           </motion.div>
@@ -99,9 +98,9 @@ export default function Home() {
 
             <motion.p
               variants={fade}
-              className="text-base font-medium text-white/80"
+              className="font-medium text-white/80"
             >
-              Software Engineering Student  at UPC
+              Software Engineering Student at UPC
             </motion.p>
           </motion.div>
 
@@ -112,6 +111,7 @@ export default function Home() {
                 <li key={id}>
                   <a
                     href={`#${id}`}
+                    aria-current={activeSection === id ? "page" : undefined}
                     className={`group flex items-center gap-3 py-2 text-xs font-semibold uppercase tracking-widest transition-colors ${activeSection === id
                       ? "text-white"
                       : "text-text-muted hover:text-white"
@@ -132,7 +132,7 @@ export default function Home() {
         </div>
 
         {/* social icons (bottom of sidebar) */}
-        <div className="mt-2">
+        <div className="mt-12">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -140,10 +140,10 @@ export default function Home() {
             className="flex gap-5 justify-start items-center"
           >
             {[
-              { href: siteConfig.social.github, icon: Github, label: "GitHub" },
+              { href: siteConfig.social.github, icon: GithubIcon, label: "GitHub" },
               {
                 href: siteConfig.social.linkedin,
-                icon: Linkedin,
+                icon: LinkedinIcon,
                 label: "LinkedIn",
               },
               { href: siteConfig.social.email, icon: Mail, label: "Email" },
@@ -153,8 +153,8 @@ export default function Home() {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={label}
-                className="text-text-muted hover:text-white transition-colors"
+                aria-label={`Visit ${label} profile`}
+                className="text-text-muted hover:text-accent transition-all hover:scale-110"
               >
                 <Icon className="w-5 h-5" />
               </a>
@@ -164,7 +164,7 @@ export default function Home() {
       </header>
 
       {/* ━━━━━━━━━━ RIGHT CONTENT (scrollable) ━━━━━━━ */}
-      <main className="lg:ml-[50%] lg:w-1/2 pt-16 lg:pt-20 pb-20 lg:pb-0 space-y-24">        {/* ─── ABOUT ME ───────────────────────── */}
+      <main className="lg:ml-[50%] lg:w-1/2 pt-16 lg:pt-20 pb-24 lg:pb-0 space-y-20 md:space-y-24">        {/* ─── ABOUT ME ───────────────────────── */}
         <section id="about">
           <motion.div
             initial="hidden"
@@ -190,27 +190,22 @@ export default function Home() {
                 variants={fade}
                 className="text-sm text-text-secondary leading-relaxed"
               >
-                I discovered programming in high school when a teacher showed me how code could{" "}
-                <span className="text-white font-medium">control physical objects</span>. That moment hooked me.
+                In high school, a teacher showed me how to make an LED blink with code. Sounds simple, but watching something physical respond to what I typed? That was it for me.
               </motion.p>
 
               <motion.p
                 variants={fade}
                 className="text-sm text-text-secondary leading-relaxed"
               >
-                I studied{" "}
-                <span className="text-white font-medium">Software Engineering</span> and threw myself into it — leading{" "}
-                <span className="text-white font-medium">tech communities</span>, building student projects, and eventually becoming a{" "}
-                <span className="text-white font-medium">Global Finalist at NASA Space Apps Challenge 2025</span>.
+                I went all in on Software Engineering at UPC. Started organizing hackathons, leading tech communities, building whatever I could think of. Last year my team made it to the{" "}
+                <span className="text-white font-medium">NASA Space Apps Global Finals</span> — top 45 out of 10,000+ teams.
               </motion.p>
 
               <motion.p
                 variants={fade}
                 className="text-sm text-text-secondary leading-relaxed"
               >
-                Now I focus on{" "}
-                <span className="text-white font-medium">backend development</span> and integrating{" "}
-                <span className="text-white font-medium">AI</span> into applications. I&apos;m comfortable figuring things out as I go, and I stick with projects until they work.
+                These days I&apos;m deep into backend systems and AI integration. I like problems that make me stay up late debugging, and I don&apos;t stop until it works.
               </motion.p>
             </div>
           </motion.div>
@@ -241,7 +236,7 @@ export default function Home() {
                 <motion.article
                   key={p.title}
                   variants={fade}
-                  className="group relative grid sm:grid-cols-[200px_1fr] gap-4 rounded-xl p-4 -mx-4 hover:bg-white/[0.03] transition-colors cursor-pointer"
+                  className="group relative grid sm:grid-cols-[200px_1fr] gap-4 rounded-xl p-4 -mx-6 hover:bg-white/3 transition-all"
                 >
                   {/* thumbnail */}
                   {p.image && (
@@ -258,10 +253,10 @@ export default function Home() {
                   <div className="space-y-2">
                     <div className="flex items-start justify-between gap-2">
                       <div>
-                        <span className="text-[10px] text-accent tracking-wider uppercase">
+                        <span className="text-[10px] text-accent tracking-wider uppercase font-semibold">
                           {p.type}
                         </span>
-                        <h3 className="text-base font-semibold text-white group-hover:text-accent transition-colors">
+                        <h3 className="font-semibold text-white group-hover:text-accent transition-colors">
                           {p.title}
                           {(p.githubLink || p.liveDemoLink) && (
                             <ArrowUpRight className="inline w-3.5 h-3.5 ml-1 opacity-0 -translate-y-0.5 group-hover:opacity-100 group-hover:translate-y-0 transition-all" />
@@ -274,10 +269,10 @@ export default function Home() {
                             href={p.githubLink}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-1 text-xs text-text-muted hover:text-accent transition-colors"
-                            aria-label={`${p.title} GitHub`}
+                            className="flex items-center gap-1 text-xs text-text-muted hover:text-accent transition-all hover:scale-105"
+                            aria-label={`View ${p.title} source code on GitHub`}
                           >
-                            <Github className="w-3.5 h-3.5" />
+                            <GithubIcon className="w-3.5 h-3.5" />
                             <span className="hidden sm:inline">Code</span>
                           </a>
                         )}
@@ -286,8 +281,8 @@ export default function Home() {
                             href={p.liveDemoLink}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-1 text-xs text-text-muted hover:text-accent transition-colors"
-                            aria-label={`${p.title} live demo`}
+                            className="flex items-center gap-1 text-xs text-text-muted hover:text-accent transition-all hover:scale-105"
+                            aria-label={`View ${p.title} live demo`}
                           >
                             <ArrowUpRight className="w-3.5 h-3.5" />
                             <span className="hidden sm:inline">Demo</span>
@@ -304,7 +299,7 @@ export default function Home() {
                       {p.technologies.map((t) => (
                         <span
                           key={t.name}
-                          className="text-[10px] px-2 py-0.5 rounded-full bg-accent/10 text-accent font-medium"
+                          className="text-[10px] px-2 py-0.5 rounded-full bg-accent/10 text-accent font-medium hover:bg-accent/20 transition-colors"
                         >
                           {t.name}
                         </span>
@@ -342,20 +337,19 @@ export default function Home() {
               {/* Education first */}
               <motion.div
                 variants={fade}
-                className="group relative grid sm:grid-cols-[120px_1fr] gap-4 rounded-xl p-4 -mx-4 hover:bg-white/[0.03] transition-colors"
+                className="group relative grid sm:grid-cols-[120px_1fr] gap-4 rounded-xl p-4 -mx-6 hover:bg-white/3 transition-all"
               >
                 <p className="text-xs text-text-muted uppercase tracking-wide pt-1">
                   {education.period}
                 </p>
                 <div>
-                  <h3 className="text-base font-semibold text-white group-hover:text-accent transition-colors">
+                  <h3 className="font-semibold text-white group-hover:text-accent transition-colors">
                     {education.degree}
                   </h3>
                   <p className="text-text-muted text-sm mt-0.5">
                     {education.institution}
                   </p>
-
-
+                  <p className="text-accent/80 text-xs mt-1">{education.note}</p>
                 </div>
               </motion.div>
 
@@ -364,17 +358,16 @@ export default function Home() {
                 <motion.div
                   key={w.company}
                   variants={fade}
-                  className="group relative grid sm:grid-cols-[120px_1fr] gap-4 rounded-xl p-4 -mx-4 hover:bg-white/[0.03] transition-colors"
+                  className="group relative grid sm:grid-cols-[120px_1fr] gap-4 rounded-xl p-4 -mx-6 hover:bg-white/3 transition-all"
                 >
                   <p className="text-xs text-text-muted uppercase tracking-wide pt-1">
                     {w.period}
                   </p>
                   <div>
-                    <h3 className="text-base font-semibold text-white group-hover:text-accent transition-colors">
+                    <h3 className="font-semibold text-white group-hover:text-accent transition-colors">
                       {w.role}
                     </h3>
                     <p className="text-text-muted text-sm mt-0.5">{w.company}</p>
-
                   </div>
                 </motion.div>
               ))}
@@ -403,7 +396,7 @@ export default function Home() {
               Skills
             </motion.p>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid sm:grid-cols-2 gap-6">
               {skills.map((s) => (
                 <motion.div
                   key={s.category}
@@ -417,7 +410,7 @@ export default function Home() {
                     {s.skills.map((sk) => (
                       <span
                         key={sk}
-                        className="text-[10px] px-2 py-0.5 rounded-full bg-accent/10 text-accent font-medium"
+                        className="text-[10px] px-2 py-0.5 rounded-full bg-accent/10 text-accent font-medium hover:bg-accent/20 transition-colors"
                       >
                         {sk}
                       </span>
@@ -457,37 +450,31 @@ export default function Home() {
                   {
                     name: "NASA Space Apps 2025",
                     designation: "Global Finalist — Top 45 / 10,000+ teams",
-                    quote: "Built Memoralab: RAG pipeline with LlamaIndex + Qdrant over 600+ NASA papers. Python/FastAPI backend on AWS Fargate with Docker.",
+                    quote: "Built Memoralab with my team. RAG pipeline over 600+ NASA papers using LlamaIndex and Qdrant. Backend in Python/FastAPI, deployed on AWS Fargate. Making it to the finals was surreal.",
                     src: "/hackathon_nasa_1.webp",
                   },
                   {
                     name: "RIMAC Hackathon 2024",
                     designation: "1st Place",
-                    quote: "Built a real-time insurance quote system with React + Node.js in 48 hours. Integrated payment processing and policy management.",
+                    quote: "48 hours to build a real-time insurance quote system. React frontend, Node.js backend, payment processing, the works. We barely slept but we won.",
                     src: "/hackathon_rimac_1.webp",
-                  },
-                  {
-                    name: "EmpoderaTech Hackathon 2024",
-                    designation: "1st Place",
-                    quote: "Developed a platform connecting women entrepreneurs with mentors and funding opportunities. Vue.js frontend with .NET backend.",
-                    src: "/hackathon_empoderatech_1.webp",
                   },
                   {
                     name: "CTF She Secure Peru 2024",
                     designation: "2nd Place — Cybersecurity CTF",
-                    quote: "Competed in web exploitation, cryptography, and reverse engineering challenges. First hands-on experience with security vulnerabilities.",
+                    quote: "First time doing a proper CTF. Web exploitation, crypto challenges, reverse engineering. Got second place and learned a ton about security.",
                     src: "/ctf_shesecure_1.webp",
                   },
                   {
                     name: "Lima DevFest",
                     designation: "Logistics Coordinator",
-                    quote: "Coordinated logistics for 500+ attendees at Lima's largest Google Developer event. Managed speaker schedules and venue operations.",
+                    quote: "Helped coordinate Lima's biggest Google Developer event. 500+ people, multiple tracks, somehow we pulled it off without major disasters.",
                     src: "/voluntariado_devfest_1.webp",
                   },
                   {
                     name: "CibersecUni",
                     designation: "Volunteer & Organizer",
-                    quote: "Organized cybersecurity workshops and CTF competitions for university students. Built community of 200+ security enthusiasts.",
+                    quote: "Organized cybersecurity workshops and CTF competitions for students. Built a community of 200+ people who actually care about security.",
                     src: "/voluntariado_cibersec_1.webp",
                   },
                 ]}
@@ -500,21 +487,22 @@ export default function Home() {
 
       {/* ━━━━━━━━━━ MOBILE BOTTOM NAV ━━━━━━━━━━ */}
       <nav
-        className="fixed bottom-0 inset-x-0 z-50 lg:hidden bg-base/80 backdrop-blur-lg border-t border-white/5"
+        className="fixed bottom-0 inset-x-0 z-50 lg:hidden bg-base/90 backdrop-blur-xl border-t border-white/5 pb-safe"
         aria-label="Mobile navigation"
       >
-        <ul className="flex justify-around items-center h-14 px-2">
+        <ul className="flex justify-around items-center h-16 px-2">
           {navSections.map(({ id, label, icon: Icon }) => (
             <li key={id}>
               <a
                 href={`#${id}`}
-                className={`flex flex-col items-center gap-0.5 px-2 py-1.5 transition-colors ${activeSection === id
+                aria-current={activeSection === id ? "page" : undefined}
+                className={`flex flex-col items-center gap-1 px-3 py-2 transition-all ${activeSection === id
                   ? "text-accent"
-                  : "text-text-muted"
+                  : "text-text-muted hover:text-white"
                   }`}
               >
-                <Icon className="w-4 h-4" />
-                <span className="text-[9px] font-medium tracking-wide">{label}</span>
+                <Icon className="w-5 h-5" />
+                <span className="text-[10px] font-medium tracking-wide">{label}</span>
               </a>
             </li>
           ))}
