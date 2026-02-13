@@ -186,26 +186,22 @@ export default function Home() {
             </motion.p>
 
             <div className="space-y-4">
+           
               <motion.p
                 variants={fade}
                 className="text-sm text-text-secondary leading-relaxed"
               >
-                In high school, a teacher showed me how to make an LED blink with code. Sounds simple, but watching something physical respond to what I typed? That was it for me.
+                
+                I spend most of my time building project, leading tech communities,  and pushing ideas into working products. 
+    My team reached the<span className="text-white font-medium"> NASA Space Apps Global Finals 2025</span>.
+
               </motion.p>
 
               <motion.p
                 variants={fade}
                 className="text-sm text-text-secondary leading-relaxed"
               >
-                I went all in on Software Engineering at UPC. Started organizing hackathons, leading tech communities, building whatever I could think of. Last year my team made it to the{" "}
-                <span className="text-white font-medium">NASA Space Apps Global Finals</span> — top 45 out of 10,000+ teams.
-              </motion.p>
-
-              <motion.p
-                variants={fade}
-                className="text-sm text-text-secondary leading-relaxed"
-              >
-                These days I&apos;m deep into backend systems and AI integration. I like problems that make me stay up late debugging, and I don&apos;t stop until it works.
+                These days I&apos;m deep into backend and AI integration. I don&apos;t stop until it works.
               </motion.p>
             </div>
           </motion.div>

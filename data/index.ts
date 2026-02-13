@@ -93,19 +93,19 @@ export const education: Education = {
 export const skills: SkillCategory[] = [
   {
     category: "Languages",
-    skills: ["Python", "Java", "C#", "SQL"],
+    skills: ["Python", "Java", "Typescript", "C++"],
   },
-  {
-    category: "AI & ML",
-    skills: ["LlamaIndex", "OpenAI API", "Qdrant", "RAG Pipelines", "LangChain"],
-  },
+
   {
     category: "Backend",
-    skills: ["FastAPI", "Spring Boot", ".NET", "Node.js", "REST APIs"],
+    skills: ["FastAPI", "Spring Boot", "Node.js"],
   },
   {
     category: "Cloud & Infra",
     skills: ["AWS", "Docker", "PostgreSQL", "MongoDB", "Git"],
+  },  {
+    category: "FrontEnd",
+    skills: ["React", "NextJs"],
   },
 ];
 
